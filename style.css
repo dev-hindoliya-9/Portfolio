@@ -1,0 +1,192 @@
+/* Global Styles */
+body {
+
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("bg.jpeg");
+  background-size:contain ;
+  height:100hv;
+  color: white; 
+  background-repeat:no-repeat;
+  scroll-behavior: smooth;
+  position: relative;
+  background-color: black;
+}
+
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.typewriter {
+
+   
+  align-items: center; 
+
+  font-family:sans-serif;
+
+  overflow: hidden;              /* text cut hoga aur typing effect aayega */
+  border-right: 2px skyblue; /* cursor effect */
+  white-space: nowrap;           /* ek hi line me likhega */
+  display: inline-block;         /* zaruri hai */
+  animation: typing 3s steps(15, end) forwards, blink .75s step-end infinite;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 16ch; }   /* naam ke characters ke hisaab se */
+}
+
+/* cursor blink */
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.btn {
+  display: inline-block;
+  background: blue;
+  align-content:center;
+  color: white;
+  border-radius: 15px;
+  transition: 0.2s;
+  margin-top: 15px;
+  padding: 10px;
+  border: white;
+}
+
+.btn:hover {
+  background: skyblue;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background: black;
+  position: sticky;
+  margin: 0 auto;
+  z-index: 1000;
+  box-sizing: border-box;
+  color: black;
+}
+
+.navbar .logo {
+  color: white;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  display: 100%;
+  margin: 0 auto;
+
+}
+
+.profile-img {
+  width: 100px;
+  border-radius: 50%;
+  border: 4px solid #ffd369;
+  margin-bottom: 20px;
+}
+
+.hero h2 span {
+  color: white;
+}
+
+/* About */
+.about {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+  }
+
+
+/* Projects */
+.projects {
+  padding: 0 20px;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #393e46;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Contact */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+background: transparent !important;
+
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact button {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 10px;
+
+}
