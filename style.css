@@ -31,17 +31,17 @@ a {
 
   font-family:sans-serif;
 
-  overflow: hidden;              /* text cut hoga aur typing effect aayega */
+  overflow: hidden;              
   border-right: 2px skyblue; /* cursor effect */
-  white-space: nowrap;           /* ek hi line me likhega */
-  display: inline-block;         /* zaruri hai */
+  white-space: nowrap;            
+  display: inline-block;          
   animation: typing 3s steps(15, end) forwards, blink .75s step-end infinite;
 }
 
 /* typing animation */
 @keyframes typing {
   from { width: 0 }
-  to { width: 16ch; }   /* naam ke characters ke hisaab se */
+  to { width: 16ch; }   
 }
 
 /* cursor blink */
