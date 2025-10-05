@@ -1,6 +1,12 @@
 /* Global Styles */
-body {
 
+*{ 
+  margin:0;
+  padding:0;
+  box-sizing: border-box ;
+}
+body {
+  width:100%;
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-image: url("bg.jpeg");
@@ -25,14 +31,9 @@ a {
 }
 
 .typewriter {
-
-   
   align-items: center; 
-
   font-family:sans-serif;
-
   overflow: hidden;              
-  border-right: 2px skyblue; /* cursor effect */
   white-space: nowrap;            
   display: inline-block;          
   animation: typing 3s steps(15, end) forwards, blink .75s step-end infinite;
@@ -68,33 +69,37 @@ a {
 /* Navbar */
 .navbar {
   width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
-  background: black;
-  position: sticky;
-  margin: 0 auto;
-  z-index: 1000;
+  padding: 0px;
   box-sizing: border-box;
-  color: black;
+  
 }
 
 .navbar .logo {
+  width:100%;
   color: white;
-  padding: 10px;
+  background-color: black;
+  padding: 10px 60px;
+  box-sizing: border-box ;
+  text-align: left;
+  
+
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
   color: white;
+  width:100%;
+  background-color: black;
+  justify-content: flex-end;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: rgb(196, 141, 15);
 }
 
 /* Hero Section */
@@ -130,6 +135,7 @@ a {
 /* Projects */
 .projects {
   padding: 0 20px;
+  
 }
 
 .project-cards {
@@ -137,10 +143,11 @@ a {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 10px;
 }
 
 .card {
-  background: #393e46;
+  background: #070a0ee4;
   padding: 20px;
   border-radius: 10px;
   width: 280px;
@@ -155,6 +162,10 @@ a {
 .card img {
   width: 100%;
   border-radius: 8px;
+}
+
+.view-btn { color: rgb(244, 190, 14);
+
 }
 
 /* Contact */
