@@ -68,11 +68,11 @@ a {
 
 /* Navbar */
 .navbar {
-  width: 100%;
+  
   display: flex;
   justify-content: space-between;
-  padding: 0px;
-  box-sizing: border-box;
+  padding: 10px 20px;
+  
   
 }
 
