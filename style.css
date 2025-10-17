@@ -91,7 +91,7 @@ a {
 
 .nav-links {
   list-style: none;
-  display: none;
+  display: flex;
   gap: 15px;
   padding: 20px;
   color: white;
