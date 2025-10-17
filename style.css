@@ -69,12 +69,14 @@ a {
 /* Navbar */
 .navbar {
   
-  display: flex;
+  display: ;
   justify-content: space-between;
   padding: 10px 20px;
   
   
 }
+/* Mobile View*/
+@media (max-width: 768px) 
 
 .navbar .logo {
   width:100%;
