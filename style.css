@@ -79,31 +79,27 @@ a {
 @media (max-width: 768px) {
 
 .navbar .logo {
-  width:100%;
-  color: white;
-  background-color: black;
-  padding: 10px 60px;
-  box-sizing: border-box ;
-  text-align: left;
-  gap: 10px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:black;
+  padding:15px 40px;
   
 }
+
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:25px;
+
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 20px;
-  color: white;
-  width:100%;
-  background-color: black;
-  justify-content: flex-end;
-  position: absilute;
-}
-
-.nav-links a:hover {
-  color: rgb(196, 141, 15);
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
 }
 
 /* Hero Section */
