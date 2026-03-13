@@ -74,6 +74,7 @@ a {
   background:black;
   padding:15px 20px;
   flex-wrap:wrap;
+  }
 /* Mobile View*/
 @media (max-width: 768px) {
 
@@ -88,7 +89,7 @@ a {
  gap:15px;
  margin-top:10px;
 }
-
+}
 
 
   .logo {
@@ -102,14 +103,14 @@ a {
 }
 
 
-.nav-links{
+  .nav-links{
   display:flex;
   list-style:none;
   gap:25px;
   flex-wrap:wrap;
 }
 
-.nav-links a{
+  .nav-links a{
   color:white;
   text-decoration:none;
   font-size:16px;
