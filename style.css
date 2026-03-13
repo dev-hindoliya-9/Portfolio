@@ -95,7 +95,16 @@ a {
 .project-card{
   max-width:280px;
   }
+  
+  .card {
+  background: #070a0ee4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s;
 }
+} 
 
 
   .logo {
