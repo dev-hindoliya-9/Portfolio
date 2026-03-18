@@ -76,60 +76,21 @@ a {
   flex-wrap:wrap;
   }
   
-/* Mobile View*/
-@media (max-width: 768px) {
+/* tablet View*/
+@media (max-width: 768px)
+{.project-cards {
+  width: 48%;
+  flex-direction: row;
+ } }
 
-
-.navbar{
- flex-direction:column;
- text-align:center;
-}
-
-.nav-links{
- display:flex;
- gap:15px;
- margin-top:10px;
-}
-
+/* PC view */
+@media (max-width: 1024px)
 {
-.project-card{
-  max-width:280px;
-  }
-  
-  .card {
-  background: #070a0ee4;
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-} 
-
-
-  .logo {
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:black;
-  padding:15px 40px;
-  
-}
-
-
-  .nav-links{
-  display:flex;
-  list-style:none;
-  gap:25px;
-  flex-wrap:wrap;
-}
-
-  .nav-links a{
-  color:white;
-  text-decoration:none;
-  font-size:16px;
-}
+.project-cards {
+  width: 30%;
+  flex-direction: row;
+    justify-content: space-between;
+} }
 
 /* Hero Section */
 .hero {
