@@ -29,14 +29,44 @@ a {
   color: inherit;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 .navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
   background:black;
-  padding:15px 20px;
-  flex-wrap:wrap;
+  padding:15px 30px;
+  position: sticky;     /* FIXED */
+  top: 0;
+  z-index: 1000;
+}
+
+/* nav links container */
+.navbar div {
+  display: flex;
+  gap: 25px;   /* REMOVE | and use gap */
+}
+
+/* nav links */
+.navbar a {
+  font-size: 16px;
+  position: relative;
+}
+
+/* underline hover effect */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffd369;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 /* Hero */
@@ -56,16 +86,17 @@ a {
 
 /* Typewriter */
 .typewriter {
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  display: inline-block;
   border-right: 2px solid white;
-  animation: typing 3s steps(15, end) forwards, blink .75s step-end infinite;
+  vertical-align: bottom;
+  animation: typing 3s steps(20, end) forwards, blink .75s step-end infinite;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 16ch; }
+  to { width: 100%; }
 }
 
 @keyframes blink {
@@ -90,7 +121,7 @@ a {
 
 /* About */
 .about {
-  max-width: 800px;   /* CENTER FIX */
+  max-width: 800px;
   padding: 20px;
   margin: auto;
   text-align: center;
@@ -101,20 +132,29 @@ a {
   padding: 20px;
 }
 
+.projects h2 {
+  margin-bottom: 30px;
+}
+
 .project-cards {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  max-width: 1000px;   /* SIZE CONTROL */
+  max-width: 1000px;
   margin: auto;
 }
 
+/* Cards */
 .card {
   background: #070a0ee4;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;   /* IMAGE SIZE FIX */
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   transition: transform 0.3s;
 }
@@ -125,6 +165,8 @@ a {
 
 .card img {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -140,7 +182,7 @@ a {
 
 .contact form {
   display: flex;
-  flex-direction: column !important;  /* ROW FIX */
+  flex-direction: column !important;
   max-width: 500px;
   width: 100%;
   margin: auto;
@@ -149,7 +191,7 @@ a {
 
 .contact input,
 .contact textarea {
-  width: 100%;   /* IMPORTANT */
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
 }
@@ -179,7 +221,13 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    gap: 10px;
     text-align: center;
+  }
+
+  .navbar div {
+    flex-direction: column;  /* STACK LINKS */
+    gap: 10px;
   }
 
   .card {
