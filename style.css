@@ -1,24 +1,24 @@
 /* Global Styles */
-
-*{ 
+*{
   margin:0;
   padding:0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
+
 body {
   width:100%;
-  margin: 0;
+  margin:0;
   font-family: "Poppins", sans-serif;
   background-image: url("bg.jpeg");
-  background-size:contain ;
-  height:100hv;
-  color: white; 
+  background-size: cover;   /* FIXED */
+  background-position: center; /* ADDED */
+  height:100vh;  /* FIXED */
+  color: white;
   background-repeat:no-repeat;
   scroll-behavior: smooth;
   position: relative;
   background-color: black;
 }
-
 
 h2 {
   text-align: center;
@@ -30,36 +30,34 @@ a {
   color: inherit;
 }
 
+/* Typewriter */
 .typewriter {
-  align-items: center; 
-  font-family:sans-serif;
-  overflow: hidden;              
-  white-space: nowrap;            
-  display: inline-block;          
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  border-right: 2px solid white; /* ADDED cursor */
   animation: typing 3s steps(15, end) forwards, blink .75s step-end infinite;
 }
 
-/* typing animation */
 @keyframes typing {
   from { width: 0 }
-  to { width: 16ch; }   
+  to { width: 16ch; }
 }
 
-/* cursor blink */
 @keyframes blink {
   50% { border-color: transparent }
 }
 
+/* Button */
 .btn {
   display: inline-block;
   background: blue;
-  align-content:center;
   color: white;
   border-radius: 15px;
   transition: 0.2s;
   margin-top: 15px;
   padding: 10px;
-  border: white;
+  border: none; /* FIXED */
 }
 
 .btn:hover {
@@ -74,32 +72,14 @@ a {
   background:black;
   padding:15px 20px;
   flex-wrap:wrap;
-  }
-  
-/* tablet View*/
-@media (max-width: 768px)
-{.project-cards {
-  width: 48%;
-  flex-direction: row;
- } }
-
-/* PC view */
-@media (max-width: 1024px)
-{
-.project-cards {
-  width: 30%;
-  flex-direction: row;
-    justify-content: space-between;
-} }
+}
 
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
   max-width: 1200px;
-  display: 100%;
   margin: 0 auto;
-
 }
 
 .profile-img {
@@ -109,23 +89,17 @@ a {
   margin-bottom: 20px;
 }
 
-.hero h2 span {
-  color: white;
-}
-
 /* About */
 .about {
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 20px;
   margin: 0 auto;
   text-align: center;
-  }
-
+}
 
 /* Projects */
 .projects {
-  padding: 0 20px;
-  
+  padding: 20px;
 }
 
 .project-cards {
@@ -133,7 +107,6 @@ a {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 10px;
 }
 
 .card {
@@ -154,27 +127,27 @@ a {
   border-radius: 8px;
 }
 
-.view-btn { color: rgb(244, 190, 14);
-
+.view-btn {
+  color: rgb(244, 190, 14);
 }
 
 /* Contact */
 .contact {
   padding: 40px 20px;
   text-align: center;
-background: transparent !important;
-
+  background: transparent !important;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 500px; /* FIXED */
   margin: auto;
   gap: 10px;
 }
 
-.contact input, .contact textarea {
+.contact input, 
+.contact textarea {
   padding: 10px;
   border-radius: 5px;
 }
@@ -188,6 +161,34 @@ footer {
   text-align: center;
   padding: 10px;
   margin-top: 40px;
-  font-size: 10px;
+  font-size: 12px;
+}
 
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
