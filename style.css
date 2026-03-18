@@ -32,7 +32,7 @@ a {
 /* ================= NAVBAR ================= */
 .navbar{
   display:flex;
-  justify-content:space-between;
+  justify-content:space-between;  /* LOGO LEFT, LINKS RIGHT */
   align-items:center;
   background:black;
   padding:15px 20px;
@@ -41,13 +41,13 @@ a {
   z-index: 1000;
 }
 
-/* LOGO */
+/* Logo */
 .navbar h2 {
   margin: 0;
   font-size: 20px;
 }
 
-/* NAV LINKS */
+/* Nav Links */
 .navbar div {
   display: flex;
   gap: 20px;   /* GAP BETWEEN LINKS */
@@ -194,17 +194,13 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row;              /* IMPORTANT FIX */
+    flex-direction: row;              /* SAME AS PC */
     justify-content: space-between;   /* LOGO LEFT, LINKS RIGHT */
   }
 
   .navbar div {
-    flex-direction: row;  /* KEEP IN ROW */
-    gap: 15px;            /* GAP BETWEEN LINKS */
-  }
-
-  .navbar a {
-    font-size: 13px;
+    flex-direction: row;  /* KEEP LINKS IN ROW */
+    gap: 15px;
   }
 
   .card {
