@@ -26,7 +26,7 @@ h2 {
 /* Links */
 a {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 /* ================= NAVBAR ================= */
@@ -35,38 +35,31 @@ a {
   justify-content:space-between;
   align-items:center;
   background:black;
-  padding:15px 30px;
-  position: sticky;     /* FIXED */
+  padding:15px 20px;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* nav links container */
+/* LOGO */
+.navbar h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* NAV LINKS */
 .navbar div {
   display: flex;
-  gap: 25px;   /* REMOVE | and use gap */
+  gap: 20px;   /* GAP BETWEEN LINKS */
 }
 
-/* nav links */
 .navbar a {
-  font-size: 16px;
-  position: relative;
+  font-size: 14px;
+  padding: 5px;
 }
 
-/* underline hover effect */
-.navbar a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #ffd369;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-
-.navbar a:hover::after {
-  width: 100%;
+.navbar a:hover {
+  color: #ffd369;
 }
 
 /* Hero */
@@ -82,25 +75,6 @@ a {
   border-radius: 50%;
   border: 4px solid #ffd369;
   margin-bottom: 20px;
-}
-
-/* Typewriter */
-.typewriter {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid white;
-  vertical-align: bottom;
-  animation: typing 3s steps(20, end) forwards, blink .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
 }
 
 /* Button */
@@ -182,7 +156,7 @@ a {
 
 .contact form {
   display: flex;
-  flex-direction: column !important;
+  flex-direction: column;
   max-width: 500px;
   width: 100%;
   margin: auto;
@@ -220,14 +194,17 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    flex-direction: row;              /* IMPORTANT FIX */
+    justify-content: space-between;   /* LOGO LEFT, LINKS RIGHT */
   }
 
   .navbar div {
-    flex-direction: column;  /* STACK LINKS */
-    gap: 10px;
+    flex-direction: row;  /* KEEP IN ROW */
+    gap: 15px;            /* GAP BETWEEN LINKS */
+  }
+
+  .navbar a {
+    font-size: 13px;
   }
 
   .card {
@@ -235,6 +212,6 @@ footer {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
